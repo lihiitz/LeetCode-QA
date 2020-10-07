@@ -1,5 +1,5 @@
 //TC (Time Complexity) = N^2
-let maxArea1 = function (height) {
+const maxArea1 = function (height) {
     let max = 0
 
     for (let i = 0; i < height.length; i++) {
@@ -16,7 +16,7 @@ let maxArea1 = function (height) {
 
 
 //TC = N
-let maxArea2 = function (height) {
+const maxArea2 = function (height) {
     let max = 0
 
     let l = 0
