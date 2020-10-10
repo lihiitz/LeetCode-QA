@@ -3,6 +3,7 @@
 //  * @return {number}
 //  */
 
+//TC = O(N)
 const maxSubArray = function(nums) {
     let len = nums.length
     
