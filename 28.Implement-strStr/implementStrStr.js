@@ -3,6 +3,9 @@
 //  * @param {string} needle
 //  * @return {number}
 //  */
+
+// case: needle:    "aaba"
+//       haystack:  "aaaba"
 const strStr = function(haystack, needle) {
     if (needle.length === 0){
         return 0
