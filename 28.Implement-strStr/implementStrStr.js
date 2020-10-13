@@ -6,6 +6,8 @@
 
 // case: needle:    "aaba"
 //       haystack:  "aaaba"
+
+//TC = N*M (N = haystack.length, M = needle.length)
 const strStr = function(haystack, needle) {
     if (needle.length === 0){
         return 0
