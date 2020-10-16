@@ -3,7 +3,7 @@
 //  * @return {number[][]}
 //  */
 
-//TC = N*M ?
+//TC = N^2 ?
 const generate = function(numRows) {
     let res = []
     for (let i = 0; i < numRows; i++){
