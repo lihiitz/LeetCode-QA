@@ -25,4 +25,18 @@ const combinationSum = function(candidates, target) {
     
 }
 
-module.exports = combinationSum
+
+const isCombinationSum = function(arr, target){ //return true if there is at least on combination that equals to target
+    for (let num of arr){
+        if (num === target){
+            return true
+        }
+        if (num < target){
+            return isCombinationSum(arr, target - num)
+        }
+    }
+    return false
+}
+
+
+module.exports = isCombinationSum
