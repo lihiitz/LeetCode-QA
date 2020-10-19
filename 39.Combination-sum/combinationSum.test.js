@@ -15,7 +15,7 @@
 
 const isCombinationSum = require('./combinationSum')
 console.log(`
-    test 1: ${isCombinationSum([2,3,6,7], 7) === true}
+    test 1: ${isCombinationSum([2,3], 7) === true}
     test 2: ${isCombinationSum([2,3,5], 8) === true}
     test 3: ${isCombinationSum([2], 1) === false}
     test 4: ${isCombinationSum([1], 1) === true}
