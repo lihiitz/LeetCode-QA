@@ -27,15 +27,20 @@ const combinationSum = function(candidates, target) {
 
 
 const isCombinationSum = function(arr, target){ //return true if there is at least on combination that equals to target
-    for (let num of arr){
-        if (num === target){
-            return true
-        }
-        if (num < target){
-            return isCombinationSum(arr, target - num)
-        }
+    if (arr.length === 0){
+        return false
     }
-    return false
+    // if (target > 0){
+        for (let num of arr){
+            if ((target % num) === 0){
+                return true
+            }else if (target - num > 0){
+                return isCombinationSum(arr, target - num)
+            }
+        }
+        return false
+    // }
+ 
 }
 
 
