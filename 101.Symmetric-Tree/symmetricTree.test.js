@@ -59,6 +59,12 @@ let t4c = new TreeNode(2, t4a, null)
 let t4d = new TreeNode(2, null, t4b)
 let t4e = new TreeNode(1, t4c, t4d)
 
+let t5a = new TreeNode(2, null, null)
+let t5b = new TreeNode(2, null, null)
+let t5c = new TreeNode(2, t5a, null)
+let t5d = new TreeNode(2, t5b, null)
+let t5e = new TreeNode(1, t5c, t5d)
+
 const isSymmetric = require('./symmetricTree')
 
 console.log(`test 1: ${isSymmetric(root) === true}`)
@@ -66,5 +72,6 @@ console.log(`test 2: ${isSymmetric(e) === false}`)
 console.log(`test 3: ${isSymmetric(test3One) === true}`)
 console.log(`test 4: ${isSymmetric(t4e) === true}`)
 
+console.log(`test 5: ${isSymmetric(t5e) === false}`)
 
 
