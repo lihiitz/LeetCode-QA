@@ -12,39 +12,22 @@
  */
 
 const inOrderTraversal = function(root, arr){
-    let res = true
     if (!root){
         return
-    }
-    if (root.left && root.right && (root.left.val !== root.right.val)){
-        res = false
     }
     if (root.left){
         inOrderTraversal(root.left, arr)
     }
-    else if (root.right){
-        arr.push(null)
-    }
     arr.push(root.val)
     if (root.right){
         inOrderTraversal(root.right, arr)
-    }else if (root.left){
-        arr.push(null)
     }
-    return res
 }
 
 const isSymmetric = function(root) {
     let nums = []
-    if (inOrderTraversal(root, nums) === false){
-        return false
-    }
-    ////////////////////
-    // return nums
-    /////////////////////////
-    if ((nums.length % 2) === 0){
-        return false
-    }
+    inOrderTraversal(root, nums)
+
     for (let first = 0, last = nums.length - 1; first <= last; first++, last--){
         if (nums[first] !== nums[last]){
             return false
