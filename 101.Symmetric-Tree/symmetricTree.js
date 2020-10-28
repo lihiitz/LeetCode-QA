@@ -53,4 +53,27 @@ const isSymmetric = function(root) {
     return true
 }
 
-module.exports = isSymmetric
+// best solution!!!! (not mine)
+const isSymmetric2 = function(root) {
+    if (!root){
+        return true
+    }
+    return isMirror(root.left, root.right)
+}
+
+const isMirror = function(root1, root2){
+    if (!root1 && !root2){
+        return true
+    }
+    if (!root1){
+        return false
+    }
+    if (!root2){
+        return false
+    }
+    if (root1.val !== root2.val){
+        return false
+    }
+    return isMirror(root1.left, root2.right) && isMirror(root1.right, root2.left)
+}
+module.exports = isSymmetric2
